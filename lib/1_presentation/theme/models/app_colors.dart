@@ -28,7 +28,7 @@ class AppColors {
   final Color primaryAttentionColor;
   final Color secondaryAttentionColor;
 
-  static const light = AppColors(
+  static const instance = AppColors(
     primaryBackground: SwoleColors.white,
     secondaryBackground: SwoleColors.offWhite,
     primaryElement: SwoleColors.darkestBlue,
@@ -37,19 +37,6 @@ class AppColors {
     primaryButtonBackgroundInactive: SwoleColors.darkBlue,
     primaryButtonForeground: SwoleColors.lightBlue,
     primaryButtonForegroundInactive: SwoleColors.greyBlue,
-    primaryAttentionColor: SwoleColors.red,
-    secondaryAttentionColor: SwoleColors.darkRed,
-  );
-
-  static const dark = AppColors(
-    primaryBackground: SwoleColors.darkerBlue,
-    secondaryBackground: SwoleColors.darkBlue,
-    primaryElement: SwoleColors.darkestBlue,
-    textDefault: SwoleColors.white,
-    primaryButtonBackground: SwoleColors.lightBlue,
-    primaryButtonBackgroundInactive: SwoleColors.greyBlue,
-    primaryButtonForeground: SwoleColors.darkerBlue,
-    primaryButtonForegroundInactive: SwoleColors.darkBlue,
     primaryAttentionColor: SwoleColors.red,
     secondaryAttentionColor: SwoleColors.darkRed,
   );

@@ -1,48 +1,28 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key, required this.title});
+import 'package:swole_control/1_presentation/constants.dart';
+import 'package:swole_control/1_presentation/pages/widgets/animations/loading_indicator.dart';
+import 'package:swole_control/1_presentation/pages/widgets/buttons/navigation_button.dart';
+import 'package:swole_control/1_presentation/pages/widgets/swole_scaffold.dart';
 
-  final String title;
-
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
+    return SwoleScaffold(
+      title: Contstants.appName,
+      navigationButton: NavigationButton.menu(
+        context: context,
+        onRoute: (_) {},
       ),
-      body: Center(
+      child: const Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
+          children: [
+            LoadingIndicator(),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
       ),
     );
   }

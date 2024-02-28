@@ -19,17 +19,9 @@ class SwoleTheme {
   final AppDurations durations;
   final AppRadii radii;
 
-  static const light = SwoleTheme(
-    colors: AppColors.light,
-    shadows: AppShadows.light,
-    units: AppUnits.instance,
-    durations: AppDurations.instance,
-    radii: AppRadii.instance,
-  );
-
-  static const dark = SwoleTheme(
-    colors: AppColors.dark,
-    shadows: AppShadows.dark,
+  static const instance = SwoleTheme(
+    colors: AppColors.instance,
+    shadows: AppShadows.instance,
     units: AppUnits.instance,
     durations: AppDurations.instance,
     radii: AppRadii.instance,

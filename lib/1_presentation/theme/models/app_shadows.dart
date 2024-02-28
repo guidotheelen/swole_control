@@ -12,13 +12,8 @@ class AppShadows {
   final BoxShadow tall;
   final BoxShadow shallow;
 
-  static const light = AppShadows(
+  static const instance = AppShadows(
     tall: SwoleShadows.tallLight,
     shallow: SwoleShadows.shallowLight,
-  );
-
-  static const dark = AppShadows(
-    tall: SwoleShadows.tallDark,
-    shallow: SwoleShadows.shallowDark,
   );
 }
