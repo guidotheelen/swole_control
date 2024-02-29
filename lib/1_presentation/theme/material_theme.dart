@@ -13,26 +13,17 @@ class MaterialTheme {
     return ThemeData(
         useMaterial3: true,
         brightness: Brightness.light,
-        scaffoldBackgroundColor: colors.primaryButtonForeground,
+        scaffoldBackgroundColor: colors.background,
         textTheme: textTheme,
-        appBarTheme: _appBarTheme(swoleTheme, textTheme),
         floatingActionButtonTheme: _floatingActionButtonThemeData(swoleTheme),
         elevatedButtonTheme: _elevatedButtonThemeData(swoleTheme));
-  }
-
-  static AppBarTheme _appBarTheme(SwoleTheme swoleTheme, TextTheme textTheme) {
-    return AppBarTheme(
-      color: swoleTheme.colors.secondaryBackground,
-      titleTextStyle: textTheme.displayMedium,
-    );
   }
 
   static FloatingActionButtonThemeData _floatingActionButtonThemeData(
     SwoleTheme swoleTheme,
   ) {
     return FloatingActionButtonThemeData(
-      foregroundColor: swoleTheme.colors.primaryBackground,
-      backgroundColor: swoleTheme.colors.textDefault,
+      backgroundColor: swoleTheme.colors.element,
     );
   }
 
@@ -42,10 +33,10 @@ class MaterialTheme {
     return ElevatedButtonThemeData(
       style: ButtonStyle(
         backgroundColor: MaterialStateProperty.all<Color>(
-          swoleTheme.colors.primaryButtonBackground,
+          swoleTheme.colors.element,
         ),
         foregroundColor: MaterialStateProperty.all<Color>(
-          swoleTheme.colors.primaryButtonForeground,
+          swoleTheme.colors.background,
         ),
         shape: MaterialStateProperty.all<OutlinedBorder>(
           RoundedRectangleBorder(

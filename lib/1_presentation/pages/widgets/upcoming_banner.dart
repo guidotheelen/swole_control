@@ -16,7 +16,7 @@ class UpcomingBanner extends StatelessWidget {
       child: Banner(
         message: 'upcoming',
         location: BannerLocation.topEnd,
-        color: context.theme.colors.secondaryAttentionColor,
+        color: context.theme.colors.element,
         child: Padding(
           padding: EdgeInsets.all(context.theme.units.xs),
           child: child,

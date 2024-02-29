@@ -5,9 +5,9 @@ import 'package:swole_control/1_presentation/theme/swole_theme.dart';
 @immutable
 class AppTypography {
   static TextTheme textTheme(SwoleTheme theme) {
-    final displayText = _defaultDisplayTextStyle(theme.colors.textDefault);
-    final headlineText = _defaultHeadlineTextStyle(theme.colors.textDefault);
-    final bodyText = _defaultBodyTextStyle(theme.colors.textDefault);
+    final displayText = _defaultDisplayTextStyle(theme.colors.element);
+    final headlineText = _defaultHeadlineTextStyle(theme.colors.element);
+    final bodyText = _defaultBodyTextStyle(theme.colors.element);
 
     return TextTheme(
       displayLarge: displayText.copyWith(fontSize: 48),
