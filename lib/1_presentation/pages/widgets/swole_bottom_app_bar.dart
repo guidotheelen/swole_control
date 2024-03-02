@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 
+import 'package:go_router/go_router.dart';
+
+import 'package:swole_control/1_presentation/pages/profile/profile_page.dart';
+import 'package:swole_control/1_presentation/pages/settings/settings_page.dart';
+
 class SwoleBottomAppBar extends StatelessWidget {
   const SwoleBottomAppBar({
     super.key,
@@ -13,15 +18,21 @@ class SwoleBottomAppBar extends StatelessWidget {
         children: [
           IconButton(
             icon: const Icon(Icons.electric_bolt),
-            onPressed: () {},
+            onPressed: () {
+              context.go('/');
+            },
           ),
           IconButton(
             icon: const Icon(Icons.person),
-            onPressed: () {},
+            onPressed: () {
+              context.go(ProfilePage.route);
+            },
           ),
           IconButton(
             icon: const Icon(Icons.settings),
-            onPressed: () {},
+            onPressed: () {
+              context.go(SettingsPage.route);
+            },
           ),
         ],
       ),

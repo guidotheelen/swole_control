@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 
 import 'package:swole_control/1_presentation/constants.dart';
 import 'package:swole_control/1_presentation/pages/widgets/swole_scaffold.dart';
-import 'package:swole_control/1_presentation/pages/workouts/count_card.dart';
+import 'package:swole_control/1_presentation/pages/workout/count_card.dart';
 import 'package:swole_control/1_presentation/theme/theme_extensions.dart';
 
-class WorkoutsPage extends StatelessWidget {
-  const WorkoutsPage({super.key});
+class WorkoutPage extends StatelessWidget {
+  const WorkoutPage({super.key});
+
+  static const route = '/';
 
   @override
   Widget build(BuildContext context) {
