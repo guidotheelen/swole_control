@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:swole_control/1_presentation/constants.dart';
-import 'package:swole_control/1_presentation/pages/homepage/homepage.dart';
+import 'package:swole_control/1_presentation/pages/workouts/workouts_page.dart';
 import 'package:swole_control/1_presentation/theme/material_theme.dart';
 
 class SwoleApp extends StatelessWidget {
@@ -12,7 +12,7 @@ class SwoleApp extends StatelessWidget {
     return MaterialApp(
       title: Contstants.appName,
       theme: MaterialTheme.instance,
-      home: const HomePage(),
+      home: const WorkoutsPage(),
     );
   }
 }

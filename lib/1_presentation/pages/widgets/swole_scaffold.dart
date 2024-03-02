@@ -2,20 +2,16 @@
 
 import 'package:flutter/material.dart';
 
-import 'package:gap/gap.dart';
-
-import 'package:swole_control/1_presentation/theme/theme_extensions.dart';
+import 'package:swole_control/1_presentation/pages/widgets/swole_bottom_app_bar.dart';
 
 class SwoleScaffold extends StatelessWidget {
   const SwoleScaffold({
     super.key,
-    this.title,
-    required this.navigationButton,
+    required this.title,
     required this.child,
   });
 
-  final String? title;
-  final Widget navigationButton;
+  final String title;
   final Widget child;
 
   @override
@@ -24,23 +20,17 @@ class SwoleScaffold extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            if (title != null)
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    title!,
-                    style: Theme.of(context).textTheme.displayMedium,
-                  ),
-                ],
-              ),
-            Gap(context.theme.units.m),
-            Expanded(child: child),
+            Expanded(
+              child: child,
+            ),
           ],
         ),
       ),
-      floatingActionButton: navigationButton,
-      floatingActionButtonLocation: FloatingActionButtonLocation.miniEndFloat,
+      bottomNavigationBar: const SwoleBottomAppBar(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: const Icon(Icons.add),
+      ),
     );
   }
 }

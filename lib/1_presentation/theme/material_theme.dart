@@ -11,19 +11,13 @@ class MaterialTheme {
     final textTheme = AppTypography.textTheme(swoleTheme);
 
     return ThemeData(
-        useMaterial3: true,
-        brightness: Brightness.light,
-        scaffoldBackgroundColor: colors.background,
-        textTheme: textTheme,
-        floatingActionButtonTheme: _floatingActionButtonThemeData(swoleTheme),
-        elevatedButtonTheme: _elevatedButtonThemeData(swoleTheme));
-  }
-
-  static FloatingActionButtonThemeData _floatingActionButtonThemeData(
-    SwoleTheme swoleTheme,
-  ) {
-    return FloatingActionButtonThemeData(
-      backgroundColor: swoleTheme.colors.element,
+      useMaterial3: true,
+      brightness: Brightness.light,
+      scaffoldBackgroundColor: colors.background,
+      textTheme: textTheme,
+      elevatedButtonTheme: _elevatedButtonThemeData(swoleTheme),
+      cardTheme: _cardTheme(swoleTheme),
+      floatingActionButtonTheme: _floatingActionButtonThemeData(swoleTheme),
     );
   }
 
@@ -46,4 +40,23 @@ class MaterialTheme {
       ),
     );
   }
+
+  static CardTheme _cardTheme(
+    SwoleTheme swoleTheme,
+  ) =>
+      CardTheme(
+        shadowColor: null,
+        elevation: 0,
+        shape: RoundedRectangleBorder(
+          borderRadius: swoleTheme.radii.medium,
+        ),
+      );
+
+  static FloatingActionButtonThemeData _floatingActionButtonThemeData(
+    SwoleTheme swoleTheme,
+  ) =>
+      FloatingActionButtonThemeData(
+        backgroundColor: swoleTheme.colors.element,
+        foregroundColor: swoleTheme.colors.background,
+      );
 }
