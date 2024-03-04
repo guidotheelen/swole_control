@@ -58,5 +58,8 @@ class MaterialTheme {
       FloatingActionButtonThemeData(
         backgroundColor: swoleTheme.colors.element,
         foregroundColor: swoleTheme.colors.background,
+        shape: RoundedRectangleBorder(
+          borderRadius: swoleTheme.radii.medium,
+        ),
       );
 }
